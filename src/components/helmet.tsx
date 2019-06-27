@@ -2,6 +2,10 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { useSiteMetaData } from '../utils'
 
+/**
+ * Header component which create a <head> tag
+ * @param {string} pageTitle - page title.
+ */
 const Header: React.FC<HeaderProps> = ({ pageTitle }) => {
   const {
     title,
