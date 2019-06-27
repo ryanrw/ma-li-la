@@ -22,7 +22,7 @@ jobs:
           command: yarn install
       - run:
           name: install gatsby-cli and netlify-cli
-          command: yarn global add gatsby-cli
+          command: yarn global add gatsby-cli netlify-cli
       - run:
           name: run build
           command: gatsby build
