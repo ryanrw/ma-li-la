@@ -28,7 +28,7 @@ jobs:
           command: gatsby build
       - run:
           name: deploy
-          command: netlify deploy --prod --dir public --message "site deployed from $CIRCLE_BUILD_NUM" --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN
+          command: netlify deploy --prod --dir public --message "site deployed from $CIRCLE_WORKFLOW_ID" --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN
 
 workflows:
   version: 2
