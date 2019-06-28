@@ -6,7 +6,7 @@ import MainPage from '../components/main'
 const IndexPage: React.FC = () => {
   const data = useSiteMetaData()
 
-  return !data.isMaintenance ? <Maintenance /> : <MainPage />
+  return data.isMaintenance ? <Maintenance /> : <MainPage />
 }
 
 export default IndexPage
