@@ -19,3 +19,20 @@ declare interface siteMetaDataQuery {
 declare interface HeaderProps {
   pageTitle: string
 }
+
+declare interface markdownData {
+  frontmatter: {
+    title: string
+  }
+  html: string
+}
+
+declare interface markdownDataFromFindFunction {
+  node: markdownData
+}
+
+declare interface markdownDataQuery {
+  allMarkdownRemark: {
+    edges: markdownDataFromFindFunction[]
+  }
+}
