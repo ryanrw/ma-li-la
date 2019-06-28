@@ -13,6 +13,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-netlify-cms`,
     // not implement yet.
     // {
     //   resolve: `gatsby-source-filesystem`,
