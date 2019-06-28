@@ -17,6 +17,21 @@ const MainSection = styled.div`
     width: 60%;
     font-size: 1.5rem;
   }
+
+  & > .images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & > p {
+      flex: 0 1 24%;
+      margin: 0 5px 20px;
+
+      & > img {
+        width: 100%;
+      }
+    }
+  }
 `
 
 const Line = styled.div`
@@ -26,8 +41,8 @@ const Line = styled.div`
 `
 
 const MainPage: React.FC = () => {
-  const data = useMarkdownData('ข้อความหน้าหลัก')
-  console.log(data)
+  const mainText = useMarkdownData('ข้อความหน้าหลัก')
+  const images = useMarkdownData('รูปภาพในเว็บไซต์')
   return (
     <Layout>
       <Header pageTitle='เบเกอรี่แสนอร่อย' />
@@ -36,11 +51,17 @@ const MainPage: React.FC = () => {
         <h1>Logo Here</h1>
         {/* I have a problem with Ilustrator, so use this hr first. */}
         <Line />
-        {typeof data !== 'undefined' ? (
-          <div
-            className='main-text'
-            dangerouslySetInnerHTML={{ __html: data.node.html }}
-          />
+        {typeof mainText !== 'undefined' && typeof images !== 'undefined' ? (
+          <>
+            <div
+              className='main-text'
+              dangerouslySetInnerHTML={{ __html: mainText.node.html }}
+            />
+            <div
+              className='images'
+              dangerouslySetInnerHTML={{ __html: images.node.html }}
+            />
+          </>
         ) : (
           <div>loading...</div>
         )}
