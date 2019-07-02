@@ -7,9 +7,9 @@ const globalCSS = css`
     margin: 0;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f0a8a8;
-    /* This is full width minus with scroll bar */
-    width: calc(100vw - (100vw - 100%));
+    background: #ee9ca7; /* fallback for old browsers */
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    width: calc(100vw - (100vw - 100%)); /* This is full width minus with scroll bar */
     height: 100vh;
   }
 `
