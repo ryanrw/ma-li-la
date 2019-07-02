@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    isMaintenance: true,
+    isMaintenance: false,
     title: `The most delicious bakery ❤️`,
     charset: `utf-8`,
     description: `Khaowhom's bakery site. You can buy some delicious bekery product here!`,
@@ -22,6 +22,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    `gatsby-plugin-offline`,
     // not implement yet.
     // `gatsby-transformer-sharp`,
     // `gatsby-plugin-sharp`,
@@ -39,6 +40,5 @@ module.exports = {
     // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }
