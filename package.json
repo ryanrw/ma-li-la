@@ -27,6 +27,7 @@
   "scripts": {
     "build": "npx gatsby build",
     "dev": "npx gatsby develop",
+    "watch": "tsc --noEmit --watch",
     "dev:https": "npx gatsby develop -S",
     "dev:watch": "npx concurrently \"tsc --noEmit --watch\" \"gatsby develop\"",
     "dev:watch-https": "npx concurrently \"tsc --noEmit --watch\" \"gatsby develop -S\"",
