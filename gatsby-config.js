@@ -23,6 +23,30 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-143172672-1',
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: false,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths
+        exclude: [],
+        // Enables Google Optimize using your container Id
+        optimizeId: 'GTM-K2D6BB6D',
+        // Enables Google Optimize Experiment ID
+        experimentId: 'OSkZdPOQRjqRXHCrRVU92Q',
+        // Set Variation ID. 0 for original 1,2,3....
+        variationId: '0',
+        // Any additional create only fields (optional)
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: 'malila.netlify.com',
+      },
+    },
     // not implement yet.
     // `gatsby-transformer-sharp`,
     // `gatsby-plugin-sharp`,
