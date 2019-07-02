@@ -14,8 +14,13 @@ const MainSection = styled.div`
   margin: 30px;
 
   & > .main-text {
-    width: 60%;
-    font-size: 1.5rem;
+    width: 80%;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 
   & > .images {
@@ -24,10 +29,13 @@ const MainSection = styled.div`
     justify-content: center;
 
     & > p {
-      flex: 0 1 24%;
+      flex-shrink: 0;
+      flex-basis: 24%;
+      min-width: 250px;
       margin: 0 5px 20px;
 
       & > img {
+        border-radius: 10px;
         width: 100%;
       }
     }
